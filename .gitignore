@@ -144,3 +144,5 @@ teacher.karma.conf.js
 teacher*
 
 package-lock.json
+
+.nova
