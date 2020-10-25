@@ -10,7 +10,7 @@ function factorial(n) {
 
   let i = n;
   while (i > 1) {
-    n = n*(i-1);
+    n = n * (i - 1);
     i--;
   }
 
