@@ -5,7 +5,7 @@
  * @returns {string}
  */
 function truncate(str, maxlength) {
-  if (str.length <= 20) {
+  if (str.length <= maxlength) {
     return str;
   }
 

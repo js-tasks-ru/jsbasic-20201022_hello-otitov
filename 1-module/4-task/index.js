@@ -7,8 +7,8 @@ function checkSpam(str) {
   let toLowerStr = str.toLowerCase();
 
   if (
-    ~toLowerStr.indexOf('1xbet') ||
-    ~toLowerStr.indexOf('xxx')
+    toLowerStr.includes('1xbet') ||
+    toLowerStr.includes('xxx')
   ) {
     return true;
   }
