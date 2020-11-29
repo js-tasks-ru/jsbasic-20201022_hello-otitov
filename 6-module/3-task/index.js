@@ -1,10 +1,6 @@
 import createElement from '../../assets/lib/create-element.js';
 
 export default class Carousel {
-  navPrev;
-  navNext;
-  inner;
-
   constructor(slides) {
     this.slides = slides;
     this.render();
@@ -12,7 +8,7 @@ export default class Carousel {
   }
 
   get template() {
-    const slides = this.slides.map( elem => {
+    const slides = this.slides.map(elem => {
       return this.slideRender(elem);
     }).join('');
     
@@ -53,7 +49,7 @@ export default class Carousel {
     this.navNext = this.elem.querySelector('.carousel__arrow_right');
     this.inner = this.elem.querySelector('.carousel__inner');
 
-    this.run();
+    this.run(); 
   }
 
   addEventListener() {
@@ -65,7 +61,7 @@ export default class Carousel {
     });
 
     const addButtons = this.elem.querySelectorAll('.carousel__button');
-    addButtons.forEach( button => {
+    addButtons.forEach(button => {
       button.addEventListener('click', (event) => {
         const customEvent = new CustomEvent('product-add', {
           detail: button.dataset.id,
