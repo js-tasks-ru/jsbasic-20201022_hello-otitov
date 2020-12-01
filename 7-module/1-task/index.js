@@ -78,9 +78,6 @@ export default class RibbonMenu {
     });
 
     this.inner.addEventListener('click', event => {
-      //event.preventDefault(); @todo ломает тест на 2 таске 9го модуля. 
-      // Но при этом нам нужно убрать скачок вверх экрана при клике на меню... хм
-
       const elementLink = event.target.classList.contains('ribbon__item');
       
       if (elementLink) {
